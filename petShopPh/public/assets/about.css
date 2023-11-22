@@ -1,0 +1,111 @@
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#mainMenu .nav-link {
+    color: #131212;
+    font-size: 15px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.bi {
+    color: #f07905;
+}
+
+span {
+    color: #f07905;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1000;
+}
+
+.btn-modal {
+    line-height: 50px;
+    border: 1px solid #f07905;
+    color: #f07905;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.btn-log {
+    width: 350px;
+    color: #fff;
+    background-color: #f07905;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.signUpLink {
+    font-weight: 700;
+    color: #f07905;
+}
+/* //////////////////// */
+
+.rowTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h5 {
+    color: #6c757d;
+}
+
+/* footer */
+footer {
+    position: relative;
+    margin-top: 250px;
+}
+.imgfooter img {
+    position: absolute;
+    left: 3%;
+    top: -15.9%;
+}
+#text-foot {
+    background: #f07905;
+    width: 100%;
+    padding: 100px;
+}
+
+#text-foot h3 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#footlist a {
+    color: #fff;
+}
+
+.btn-btm {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 40px;
+    color: #f07905;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    width: 350px;
+    font-weight: 700;
+}
+
+.btn-btm:hover {
+    color: #fff;
+    background-color: #a95705;
+    transition: ease-in-out 0.3s;
+}
+
+footer h4 {
+    color: #f07905;
+}
