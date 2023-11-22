@@ -54,12 +54,12 @@
                   Services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/grooming">Pet Grooming</a></li>
+                  <li><a class="dropdown-item" href="/services/grooming">Pet Grooming</a></li>
                   <li><a class="dropdown-item" href="/services/boarding">Pet Boarding</a></li>
-                  <li><a class="dropdown-item" href="/training">Pet Training</a></li>
-                  <li><a class="dropdown-item" href="/sitting">Pet Sitting</a></li>
-                  <li><a class="dropdown-item" href="/daycare">Pet Daycare</a></li>
-                  <li><a class="dropdown-item" href="/petwalking">Pet Walking</a></li>
+                  <li><a class="dropdown-item" href="/services/training">Pet Training</a></li>
+                  <li><a class="dropdown-item" href="/services/sitting">Pet Sitting</a></li>
+                  <li><a class="dropdown-item" href="/services/daycare">Pet Daycare</a></li>
+                  <li><a class="dropdown-item" href="/services/petwalking">Pet Walking</a></li>
                 </ul>
               </li>
               <li><button type="button" class="btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">

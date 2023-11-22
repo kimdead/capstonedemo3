@@ -24,29 +24,29 @@
                 <div class="card p-4 text-center rounded-start-4 rounded-end-0">
                   {{-- <h2 class="fw-bold pt-md-3"><span>Grooming</span></h2> --}}
   
-                  <form
-                    action="process.php"
+                  <form method="POST"
                     class="pt-3 text-start mt-4"
                     id="signupform"
-                  >
+                    action="/services"
+                  >@csrf
 
                                   
                     {{-- Breed?? --}}
 
                 
-                    <h5 class="">What breed? (optional)</h5>
-                    <input class="form-control" type="text" placeholder="What breed is your dog?" aria-label="default input example" class="form-control-lg border-1 breed">
-                  
+                    <h5 class="mt-5">What breed? (optional)</h5>
+                    <input class="form-control" name="breed" value="{{old('breed')}}" type="text" placeholder="What breed is your pet?" aria-label="default input example" class="form-control-lg border-1 breed">
+
                     {{-- petSize --}}
 
-                    <h5 class="mt-5">What is the size of your dog?</h5>
+                   <h5 class="mt-5">What is the size of your pet?</h5>
                   
-                    <select class="form-select service" aria-label="Default select example">
-                        <option class="option" selected>Choose Size</option>
-                        <option value="1">Small       (below-10kg)</option>
-                        <option value="2">Medium   (11-30kg)</option>
-                        <option value="3">Large        (31-40kg)</option>
-                        <option value="4">Extra Large    (41kg-above)</option>
+                    <select class="form-select service" name="petSize" aria-label="Default select example">
+                        <option class="option" value="-" selected>Choose Size</option>
+                        <option value="Small (below-10kg)">Small (below-10kg)</option>
+                        <option value="Medium (11-30kg)">Medium (11-30kg)</option>
+                        <option value="Large (31-40kg)">Large (31-40kg)</option>
+                        <option value="Extra Large(41kg-above)">Extra Large (41kg-above)</option>
                       </select>
 
 
@@ -54,38 +54,37 @@
                       
                         {{-- anything else? --}}
 
-                     <h5 class="mt-5">Anything else the dog walker needs to know? (optional)</h5>
-                    <input class="form-control" type="text" placeholder="(optional)" aria-label="default input example" class="form-control-lg border-1 breed">
+                        <h5 class="mt-5">Anything else the groomer needs to know? (optional)</h5>
+                        <input class="form-control" name="anythingElse" value="{{old('anythingElse')}}" type="text" placeholder="(optional)" aria-label="default input example" class="form-control-lg border-1 breed">
 
 
-
-                    {{-- petSize --}}
+                    {{-- walks --}}
 
                     <h5 class="mt-5">Number of walks per day</h5>
                   
-                    <select class="form-select service" aria-label="Default select example">
-                        <option class="option" selected>number of walk</option>
-                        <option value="1">1 walk per day</option>
-                        <option value="2">2 walks per day</option>
-                        <option value="3">3 walks per day</option>
+                    <select class="form-select service" aria-label="Default select example" name="walks">
+                        <option class="option" selected value="-">number of walk</option>
+                        <option value="1 walk per day">1 walk per day</option>
+                        <option value="2 walks per day">2 walks per day</option>
+                        <option value="3 walks per day">3 walks per day</option>
                        
                       </select>
 
                       {{-- number of days --}}
             
                       <h5 class="mt-5">Number Of Days Required</h5>
-                                <input class="form-control" type="text" placeholder="number of days" aria-label="default input example" class="form-control-lg border-1 breed">
-                                <div id="emailHelp" class="form-text mb-5">a value between 1 and 365 is required</div>
+           <input class="form-control" type="text" placeholder="number of days" aria-label="default input example" class="form-control-lg border-1 breed" name="daysreq" value="{{old('daysreq')}}">
+           <div id="emailHelp" class="form-text mb-5">a value between 1 and 365 is required</div>
 
                     {{-- date and time  --}}
 
-                    <h5 class="mt-5">Please pick a starting date of the service</h5>
+                    <h5 class="mt-5">Pick a starting date of the service</h5>
 
                     <label class="m-2" for="confirm"> <h6>Date *</h6></label>
-          <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time">
+          <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time" name="date" value="date">
           <br>
           <label class="m-2" for="confirm"> <h6>Time *</h6></label>
-          <input type="time" class="set" id="set-time">
+          <input type="time" class="set" id="set-time" name="time" value="time">
 
 
           <div class="d-flex">

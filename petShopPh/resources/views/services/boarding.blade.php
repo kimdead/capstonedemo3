@@ -24,66 +24,65 @@
                 <div class="card p-4 text-center rounded-start-4 rounded-end-0">
                   {{-- <h2 class="fw-bold pt-md-3"><span>Grooming</span></h2> --}}
   
-                  <form
-                    action="process.php"
-                    class="pt-3 text-start mt-4"
-                    id="signupform"
-                  >
+                  <form method="POST"
+                  class="pt-3 text-start mt-4"
+                  id="signupform"
+                  action="/services"
+                >@csrf
 
                   {{-- type of pet --}}
 
                     
                   <h5 class="">what is your pet?</h5>
-                  <select class="form-select service" aria-label="Default select example">
-                    <option class="option" selected>Choose Pet</option>
-                    <option value="1">Dog</option>
-                    <option value="2">cat</option>
-                    <option value="2">Rabbit</option>
-                    <option value="2">Guinea Pig</option>
-                    <option value="2">Bird</option>
-                    <option value="2">Reptile</option>
+                  <select class="form-select service" aria-label="Default select example" name="petType">
+                    <option class="option" selected value="-">Choose Pet</option>
+                    <option value="Dog">Dog</option>
+                    <option value="cat">cat</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Guinea Pig">Guinea Pig</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Reptile">Reptile</option>
                     
-                   
                   </select>
                 
                     {{-- Breed?? --}}
 
                 
                     <h5 class="mt-5">What breed? (optional)</h5>
-                    <input class="form-control" type="text" placeholder="What breed is your pet?" aria-label="default input example" class="form-control-lg border-1 breed">
-                  
+                    <input class="form-control" type="text" placeholder="What breed is your pet?" aria-label="default input example" class="form-control-lg border-1 breed" name="breed" value="{{old('breed')}}">
+
                     {{-- petSize --}}
 
-                    <h5 class="mt-5">What is the size of your pet?</h5>
+                     <h5 class="mt-5">What is the size of your pet?</h5>
                   
-                    <select class="form-select service" aria-label="Default select example">
-                        <option class="option" selected>Choose Size</option>
-                        <option value="1">Small       (below-10kg)</option>
-                        <option value="2">Medium   (11-30kg)</option>
-                        <option value="3">Large        (31-40kg)</option>
-                        <option value="4">Extra Large    (41kg-above)</option>
+                    <select class="form-select service" aria-label="Default select example" name="petSize">
+                        <option class="option" selected value="-">Choose Size</option>
+                        <option value="Small (below-10kg)">Small       (below-10kg)</option>
+                        <option value="Medium (11-30kg)">Medium   (11-30kg)</option>
+                        <option value="Large (31-40kg)">Large        (31-40kg)</option>
+                        <option value="Extra Large (41kg-above)">Extra Large    (41kg-above)</option>
                       </select>
                       
                         {{-- anything else? --}}
 
                      <h5 class="mt-5">Anything else the sitter needs to know? (optional)</h5>
-                    <input class="form-control" type="text" placeholder="(optional)" aria-label="default input example" class="form-control-lg border-1 breed">
+                     <input class="form-control" name="anythingElse" value="{{old('anythingElse')}}" type="text" placeholder="(optional)" aria-label="default input example" class="form-control-lg border-1 breed">
 
                     {{-- date and time  --}}
 
                     <h5 class="mt-5">Please pick a start date and time of the service</h5>
 
                     <label class="m-2" for="confirm"> <h6>Date *</h6></label>
-          <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time">
-          <br>
-          <label class="m-2" for="confirm"> <h6>Time *</h6></label>
-          <input type="time" class="set" id="set-time">
+                    <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time" name="date" value="date">
+                    <br>
+                    <label class="m-2" for="confirm"> <h6>Time *</h6></label>
+                    <input type="time" class="set" id="set-time" name="time" value="time">
 
           {{-- number of nights --}}
 
           <h5 class="mt-5">Number Of Nights Required</h5>
-                    <input class="form-control" type="text" placeholder="number of nights" aria-label="default input example" class="form-control-lg border-1 breed">
-                    <div id="emailHelp" class="form-text mb-5">a value between 1 and 365 is required</div>
+          <input class="form-control" type="text" placeholder="number of days" aria-label="default input example" class="form-control-lg border-1 breed" name="daysreq" value="{{old('daysreq')}}">
+          <div id="emailHelp" class="form-text mb-5">a value between 1 and 365 is required</div>
 
 
 

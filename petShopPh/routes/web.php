@@ -18,28 +18,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ServerController::class, 'index']);
 
+// services//////////
+
 Route::get('/services/boarding',[ServerController::class, 'boarding']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/services/daycare',[ServerController::class, 'daycare']);
 
-Route::get('/daycare', function () {
-    return view('daycare');
-});
-Route::get('/grooming', function () {
-    return view('grooming');
-});
-Route::get('/sitting', function () {
-    return view('sitting');
-});
-Route::get('/petwalking', function () {
-    return view('petwalking');
-});
-Route::get('/training', function () {
-    return view('training');
-});
+Route::get('/services/grooming',[ServerController::class, 'grooming']);
 
-Route::get('/signup', function () {
-    return view('signup');
-});
+
+// store service data
+Route::post('/services',[ServerController::class, 'store']);
+
+Route::get('/services/petwalking',[ServerController::class, 'petwalking']);
+
+Route::get('/services/sitting',[ServerController::class, 'sitting']);
+
+
+
+Route::get('/services/training',[ServerController::class, 'training']);
