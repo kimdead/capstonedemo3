@@ -49,6 +49,22 @@ span {
     font-weight: 700;
     color: #f07905;
 }
+
+.list-unstyled {
+    width: 600px;
+}
+
+.list-unstyled .content {
+    font-size: 25px;
+}
+
+.cardmid {
+    height: 700px;
+}
+
+.card-group {
+    height: 700px;
+}
 /* //////////////////// */
 
 .contact {

@@ -33,7 +33,7 @@
 
                   {{-- petSize --}}
 
-                  <h5 class="">Visit Type?</h5>
+                  <h5 class="">Visit Type? <span class="text danger">*</span></h5>
                   
                   <select class="form-select service visitType" name="visitType" aria-label="Default select example">
                       <option class="option" selected value="-">visit type</option>
@@ -47,7 +47,7 @@
                   {{-- type of pet --}}
 
                     
-                  <h5 class="mt-5">what is your pet?</h5>
+                  <h5 class="mt-5">what is your pet? <span class="text danger">*</span></h5>
                   <select class="form-select service" name="petType" aria-label="Default select example">
                     <option class="option choosePet" selected value="-">Choose Pet</option>
                     <option value="Dog">Dog</option>
@@ -63,7 +63,7 @@
                   
                     {{-- petSize --}}
 
-                    <h5 class="mt-5">What is the size of your pet?</h5>
+                    <h5 class="mt-5">What is the size of your pet? <span class="text danger">*</span></h5>
                   
                     <select class="form-select service" name="petSize" aria-label="Default select example">
                         <option class="option" value="-" selected>Choose Size</option>
@@ -83,15 +83,15 @@
 
                     <h5 class="mt-5">Pick a starting date of the service</h5>
 
-                    <label class="m-2" for="confirm"> <h6>Date *</h6></label>
+                    <label class="m-2" for="confirm"> <h6>Date <span class="text danger">*</span></h6></label>
           <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time" name="date" value="date">
           <br>
-          <label class="m-2" for="confirm"> <h6>Time *</h6></label>
+          <label class="m-2" for="confirm"> <h6>Time <span class="text danger">*</span></h6></label>
           <input type="time" class="set" id="set-time" name="time" value="time">
 
            {{-- number of days --}}
 
-           <h5 class="mt-5">Number Of Days Required</h5>
+           <h5 class="mt-5">Number Of Days Required <span class="text danger">*</span></h5>
            <input class="form-control" type="text" placeholder="number of days" aria-label="default input example" class="form-control-lg border-1 breed" name="daysreq" value="{{old('daysreq')}}">
            <div id="emailHelp" class="form-text mb-5">a value between 1 and 365 is required</div>
 

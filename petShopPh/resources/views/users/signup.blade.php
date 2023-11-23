@@ -24,10 +24,12 @@
                   <h2 class="fw-bold pt-md-3">Sign up with <span>NamePetshop</span></h2>
   
                   <form
-                    action="process.php"
+                  method="POST"
+                    action="/users"
                     class="pt-3 text-start mt-4"
                     id="signupform"
-                  >
+                  >@csrf
+
                     <div class="row g-3">
                       <div class="col">
                         <div class="mb-4">
@@ -38,17 +40,27 @@
                             placeholder="First Name"
                             class="form-control-lg w-100 border-1"
                           />
+                          
+                          @error('name')
+                          <p class="text-danger">{{$message}}</p>
+                      @enderror
+
                         </div>
                       </div>
                       <div class="col">
                         <div class="mb-4">
                           <input
                             type="text"
-                            name="name"
+                            name="Lastname"
                             id="name"
                             placeholder="Last Name"
                             class="form-control-lg w-100 border-1"
                           />
+
+                          @error('Lastname')
+                          <p class="text-danger">{{$message}}</p>
+                      @enderror
+
                         </div>
                       </div>
                     </div>
@@ -60,6 +72,11 @@
                         placeholder="Enter your Email"
                         class="form-control-lg w-100 border-1"
                       />
+
+                      @error('email')
+                          <p class="text-danger">{{$message}}</p>
+                      @enderror
+
                     </div>
                     <div class="mb-4">
                       <input
@@ -69,15 +86,25 @@
                         placeholder="Enter password"
                         class="form-control-lg w-100 border-1"
                       />
+
+                      @error('password')
+                          <p class="text-danger">{{$message}}</p>
+                      @enderror
+
                     </div>
                     <div class="mb-5">
                       <input
                         type="password"
-                        name="password"
+                        name="password_confirmation"
                         id="password"
                         placeholder="Confirm password"
                         class="form-control-lg w-100 border-1"
                       />
+
+                      @error('password_confirmation')
+                          <p class="text-danger">{{$message}}</p>
+                      @enderror
+
                     </div>
                     <div class="d-flex mt-5">
                       <button class="btn btn-submit fw-bold justify-content-center mx-auto">Submit</button>

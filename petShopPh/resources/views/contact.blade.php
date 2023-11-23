@@ -18,67 +18,26 @@
     </div>
 
     <!-- form -->
+
     <div class="container position-absolute" id="cont-contacts">
       <div class="row row-cols-md-2 g-0">
+        
         <!-- form -->
 
-        <div class="col-md-7">
+        <div class="col-md-7 cardmid">
           <div class="card-group">
             <div class="card p-4 rounded-start-4 rounded-end-0">
               <h2 class="fw-bold text-center pt-md-3" id="contactform">
-                Send Us a Message
+                Dont be shy, say Hi
               </h2>
-
-              <form
-                action="process.php"
-                class="pt-3 text-start"
-                id="contactform"
-              >
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Enter your Name"
-                    class="form-control"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter your Email"
-                    class="form-control"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    placeholder="Enter your Phone"
-                    class="form-control"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Message</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="10"
-                    placeholder="Enter your Message"
-                    class="form-control"
-                  ></textarea>
-                </div>
-                
-                  <button class="btn-submit fw-semibold mt-2">Submit</button>
-                
-              </form>
+              <div class="d-flex mt-5">
+              <ul class="list-unstyled ms-5 ps-5 pt-4">
+                <p class="content fw-semibold mb-5"><i class="bi bi-telephone-fill fs-1"></i> 0915-123-4567</p>
+                <p class="content fw-semibold mb-5"><i class="bi bi-geo-alt-fill fs-1"></i> 143, PagHanapin st. kungSanMan</p>
+                <p class="content fw-semibold mb-5"><i class="bi bi-clock-fill fs-1"></i> weekdays : Open | Sunday : close</p>
+                <p class="content fw-semibold mb-5"><i class="bi bi-c-circle fs-1"></i> 2023 petMalu, All Rights Reserved</p>
+              </ul>
+            </div>
             </div>
           </div>
         </div>

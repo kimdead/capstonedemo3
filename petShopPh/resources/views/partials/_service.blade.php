@@ -16,7 +16,7 @@
           <div class="card-body text-center pb-5">
             <h5 class="card-title fw-700">Pet Grooming</h5>
         <p class="card-text text-center">Expert grooming services include bathing, haircuts ensuring your pet looks and feels their best.</p>
-        <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+        <div class="centBtn text-center"><a href="/services/grooming" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
           <div class="card-body text-center pb-5">
             <h5 class="card-title fw-700">Pet Boarding</h5>
         <p class="card-text text-center">Safe and comfortable overnight care with playtime, socialization, and attention for your pet's well-being.</p>
-        <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+        <div class="centBtn text-center"><a href="/services/boarding" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
           <div class="card-body text-center pb-5">
             <h5 class="card-title fw-700">Pet Sitting</h5>
         <p class="card-text">In-home care with feeding and playtime, offering a stress-free environment for your pet while you're away.</p>
-        <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+        <div class="centBtn text-center"><a href="/services/sitting" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <div class=" text-center">
             <h5 class="card-title fw-700">Pet Daycare</h5>
         <p class="card-text">In-home care with feeding and playtime, offering a stress-free environment for your pet while you're away.</p>
-        <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+        <div class="centBtn text-center"><a href="/services/daycare" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
           <div class=" text-center">
             <h5 class="card-title fw-700">Pet Walking</h5>
         <p class="card-text">In-home care with feeding and playtime, offering a stress-free environment for your pet while you're away.</p>
-        <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+        <div class="centBtn text-center"><a href="/services/petwalking" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
           <div class=" text-center">
             <h5 class="card-title fw-700">Pet Training</h5>
             <p class="card-text">Professional obedience and behavioral training for a well-mannered and happy pet.</p> <br>
-            <div class="centBtn text-center"><a href="#" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
+            <div class="centBtn text-center"><a href="/services/training" class="btn btn-serv mt-5 mb-3">Book Now</a></div>
           </div>
         </div>
       </div>

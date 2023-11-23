@@ -33,7 +33,7 @@
                   {{-- type of pet --}}
 
                     
-                  <h5 class="">what is your pet?</h5>
+                  <h5 class="">what is your pet? <span class="text danger">*</span></h5>
                   <select class="form-select service" name="petType" aria-label="Default select example">
                     <option class="option" selected value="-">Choose Pet</option>
                     <option value="Dog">Dog</option>
@@ -44,12 +44,15 @@
                     {{-- Breed?? --}}
 
                 
-                    <h5 class="mt-5">What breed? (optional)</h5>
+                    <h5 class="mt-5">What breed? (optional) <span class="text danger">*</span></h5>
                     <input class="form-control" type="text" placeholder="What breed is your pet?" aria-label="default input example" class="form-control-lg border-1 breed" name="breed" value="{{old('breed')}}">
+                    @error('breed')
+                        <p class="text-danger">{{$message}}</p>
+                    @enderror
 
                     {{-- petSize --}}
 
-                   <h5 class="mt-5">What is the size of your pet?</h5>
+                   <h5 class="mt-5">What is the size of your pet? <span class="text danger">*</span></h5>
                   
                     <select class="form-select service" aria-label="Default select example" name="petSize">
                         <option class="option" selected value="-">Choose Size</option>
@@ -58,11 +61,13 @@
                         <option value="Large (31-40kg)">Large        (31-40kg)</option>
                         <option value="Extra Large (41kg-above)">Extra Large    (41kg-above)</option>
                       </select>
-
+                      @error('petSize')
+                      <p class="text-danger">{{$message}}</p>
+                  @enderror
 
                       {{-- grooming services --}}
 
-                      <h5 class="mt-5">What type of grooming services required?</h5>
+                      <h5 class="mt-5">What type of grooming services required? <span class="text danger">*</span></h5>
 
                       <div class="dropdown">
                         <button class="btn w-100 text-start dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,10 +124,10 @@
 
                     <h5 class="mt-5">Please pick a date and time of the service</h5>
 
-                    <label class="m-2" for="confirm"> <h6>Date *</h6></label>
+                    <label class="m-2" for="confirm"> <h6>Date <span class="text danger">*</span></h6></label>
                     <input type="date" min="2017-08-15" max="2045-08-26" class="set" id="set-time" name="date" value="date">
                     <br>
-                    <label class="m-2" for="confirm"> <h6>Time *</h6></label>
+                    <label class="m-2" for="confirm"> <h6>Time <span class="text danger">*</span></h6></label>
                     <input type="time" class="set" id="set-time" name="time" value="time">
 
           <div class="d-flex">

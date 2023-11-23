@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ServerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,23 +18,28 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[ServerController::class, 'index']);
+Route::view("/contact", "contact");
+
+// store service data
+Route::post('/services',[ServerController::class, 'store']);
 
 // services//////////
-
 Route::get('/services/boarding',[ServerController::class, 'boarding']);
 
 Route::get('/services/daycare',[ServerController::class, 'daycare']);
 
 Route::get('/services/grooming',[ServerController::class, 'grooming']);
 
-
-// store service data
-Route::post('/services',[ServerController::class, 'store']);
-
 Route::get('/services/petwalking',[ServerController::class, 'petwalking']);
 
 Route::get('/services/sitting',[ServerController::class, 'sitting']);
 
-
-
 Route::get('/services/training',[ServerController::class, 'training']);
+
+
+    // register
+Route::get('/signup',[UserController::class, 'create']);
+
+
+//create new user
+Route::post('/users',[UserController::class, 'store']);

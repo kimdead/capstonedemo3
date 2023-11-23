@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Validation;
 
@@ -14,7 +13,14 @@ class ServerController extends Controller
         return view ('index');
     }
 
-    //show service up form
+    public function signup () {
+        return view ('signup');
+    }
+    public function contact () {
+        return view ('contact');
+    }
+
+    //show service form
     public function boarding() {
         return view('services.boarding');
     }
@@ -39,25 +45,37 @@ class ServerController extends Controller
         return view('services.training');
     }
 
+
+
+    // public function store(Request $request){
+    //     dd($request->all());
+    // }
+
+
+
     // store service data
     public function store(Request $request) {
-        // dd($request->all());
+        
 
         $formFields = $request->validate([
-        'petType' => 'required',
-        'petSize' => 'required',
-        'petAge' => 'required',
-        'date' => 'required',
-        'time' => 'required',
-        'petGroom' => 'required',
-        'petProgram' => 'required',    
-        'daysreq' => 'required',
-        'petTrain' => 'required', 
-        'walks' => 'required', 
-        'petAge' => 'required' 
+        // 'petType' => 'required',
+        // 'petSize' => 'required',
+        // 'petAge' => 'required',
+        // 'date' => 'required',
+        // 'time' => 'required',
+        // 'petGroom' => 'required',
+        // 'petProgram' => 'required',    
+        // 'daysreq' => 'required',
+        // 'petTrain' => 'required', 
+        // 'walks' => 'required', 
+        // 'petAge' => 'required' 
+            'breed' => 'required'
+
     ]);
 
-    return redirect('/');
+    ServerController::grooming($formFields);
+
+    return redirect('/')->with('message', 'Book successful!');
     }
 }
 
